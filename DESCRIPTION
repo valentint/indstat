@@ -1,0 +1,16 @@
+Package: indstat
+Date: 2021-12-08
+Title: INDSTAT Utilities updated for 2021
+Version: 0.1
+Author: Valentin Todorov <valentin.todorov@chello.at>
+Description: The package contains utilities, examples, data sets and other
+    materials related to the UNIDO INDSTAT database.
+Maintainer: Valentin Todorov <valentin.todorov@chello.at>
+Depends: R (>= 2.10), XLConnect, methods
+Imports: tools, reshape2, plyr, lattice
+LazyLoad: yes
+LazyData: yes
+License: GPL (>= 2)
+Packaged: 2020-12-20 22:09:57 UTC; todorovv
+NeedsCompilation: no
+RoxygenNote: 7.1.1

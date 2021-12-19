@@ -1,0 +1,61 @@
+Graphs for yearbook 2014
+
+1. MVA.growth: Annual growth of world MVA
+    - MVACOD
+    - 2004-2013
+    - IND - Industrialized Economies
+    - DEV - Developing & EIE
+    - WOR - World
+    - Annual growth = MVA_t1/MVA_t0 * 100 - 100
+    - splines
+
+2. MVAGDP.growth: MVA and GDP growth of developing and emerging industrial economies
+    - MVACOD, GDPCOD
+    - 2000-2013
+    - DEV - Developing & EIE
+    - Annual growth = MVA_t1/MVA_t0 * 100 - 100
+    - splines
+
+3. MVA.distr: Distribution of the world MVA
+    - MVACOD
+    - 2013
+    - 916 - China <Grouping by development>
+    - EIEX - Emerging Industrial Economies <excl. China>
+    - DEVOT - Other Developing Economies
+    - LDC - Least developed countries
+    - INT - Industrialized Economies
+    - pie chart
+
+4. MVA.middle.income: Share of middle income countries in world MVA
+    - MVACOD
+    - 2000-2013
+    - 909 - High Income <World>
+    - 916 - China <Grouping by development>
+    - 908 - Upper Middle Income(excl.China) <World>
+    - 910 - Lower Middle Income <World>
+    - 907 - Low Income <World>
+    - WOR - World
+    - bar chart (China and Middle income countries)
+
+5. MVA.growth.ind: MVA growth in industrialized countries
+    - MVACOD
+    - 2004-2013
+    - 935 - East Asia <Industrialized>
+    - 981 - Europe <industrialized>
+    - 937 - North America
+    - WAI - West Asia <Industrialized>
+    - 972 - Others <Industrialized>
+    - line chart
+
+6. MVA.growth.africa: Average annual growth rates of MVA in
+Africa
+    - MVACOD
+    - 2003-2013
+    - 2003-2007 and 2008-2012
+    - 982W - Africa <World>
+    - 988 - Central Africa
+    - 995 - Eastern Africa
+    - 986 - North Africa
+    - SAFR - Southern Africa <same as SADC>
+    - 992 - Western Africa
+    - radial plot

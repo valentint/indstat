@@ -1,0 +1,25 @@
+importFrom("grDevices", "cairo_pdf", "col2rgb", "colorRampPalette",
+             "dev.off", "embedFonts", "gray.colors", "pdf", "rgb",
+             "savePlot", "svg", "win.metafile", "xy.coords")
+importFrom("graphics", "abline", "axis", "barplot", "box", "hist",
+         "image", "legend", "lines", "mtext", "par", "pie", "points",
+         "rect", "text", "title")
+importFrom("stats", "aggregate", "coef", "density", "lm", "median",
+         "na.omit", "predict", "reorder", "sd")
+importFrom("utils", "data", "head", "read.csv", "sessionInfo")
+importFrom("tools", "file_path_sans_ext")
+importFrom("plyr", "ddply")
+importFrom("reshape2", "dcast")
+importFrom("lattice", "dotplot", "panel.xyplot", "panel.segments", "panel.abline")
+
+
+# Export all names
+exportPattern(".")
+
+# Import all packages listed as Imports or Depends
+###import(
+###  methods
+###)
+
+##S3 methods
+S3method(print, grate)
