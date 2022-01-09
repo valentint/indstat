@@ -37,4 +37,8 @@ getCountryCode("Austria")
 getCountryCodeISO3("Austria")
 getCountryName(c(156, 100, 512))
 
+## Test now the encoding - countries with special characters 
+##  in the names: Côte d'Ivoire,  Curaçao and Réunion
+
+getCountryName(c(384, 531, 638))
 ```

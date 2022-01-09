@@ -39,4 +39,10 @@ getCountryCodeISO3("Austria")
 #> [1] "AUT"
 getCountryName(c(156, 100, 512))
 #> [1] "China"    "Bulgaria" "Oman"
+
+## Test now the encoding - countries with special characters 
+##  in the names: Côte d'Ivoire,  Curaçao and Réunion
+
+getCountryName(c(384, 531, 638))
+#> [1] "Côte d'Ivoire" "Curaçao"       "Réunion"
 ```

@@ -5,7 +5,7 @@ cgrps=c("DEV", "LDC", "LDCAF", "LDCAS")
 GDP <- select.gdp(years, cgrps)
 MVA <- select.mva(years, cgrps)
 
-## Select constant data with the general function select.direc()
+## Select constant data with the general function select.direct()
 GDP1 <- select.direct(years, cgrps, var="GDPCOD")
 MVA1 <- select.direct(years, cgrps, var="MVACOD")       #default
 
