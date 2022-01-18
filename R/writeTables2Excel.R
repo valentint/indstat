@@ -28,3 +28,16 @@ writeTables2Excel <- function(tab, fname, rownames=FALSE)
     }
     saveWorkbook(wb)
 }
+
+writeWS <- function(wb, sname, df, cs)
+{
+    rowIndex <- 1:nrow(df)
+    colIndex <- 1:ncol(df)
+
+    createSheet(wb, name=sname)
+    if(!missing(cs))
+        setCellStyle(wb, sheet=sname, row=rowIndex, col=colIndex, cellstyle=cs)
+
+    setColumnWidth(wb, sheet=sname, column=colIndex, width=-1)
+    writeWorksheet(wb, df, sheet=sname)
+}
