@@ -135,16 +135,18 @@ read.indstat2 <- function(indata, fdb=c("32", "3x", "4x", "32us", "3xus", "4xus"
 #' @export
 #' @author \email{valentin@@todorov.at}
 #'
-read_data <- function(indata, rev_suffix=c("us", ""), source=c("data-portal", "desktop"),
+read_data <- function(indata, rev_suffix=c("us", "none"), source=c("data-portal", "desktop"),
         first_year_3x=2010, first_year_4x=2008, first_year_32=2000, first_year=first_year_3x,
         exclude_IIP=TRUE)
 {
     rev_suffix <- match.arg(rev_suffix)
+    if(rev_suffix == "none")
+        rev_suffix=""
     source <- match.arg(source)
 
-    inst32 <- read.indstat(indata, rev="32us", source=source)
-    inst3x <- read.indstat(indata, rev="3xus", source=source)
-    inst4x <- read.indstat(indata, rev="4xus", source=source)
+    inst32 <- read.indstat(indata, rev=paste0("32", rev_suffix), source=source)
+    inst3x <- read.indstat(indata, rev=paste0("3x", rev_suffix), source=source)
+    inst4x <- read.indstat(indata, rev=paste0("4x", rev_suffix), source=source)
 
     inst32 <- inst32[inst32$year >= first_year, ]
     if(exclude_IIP)
@@ -171,7 +173,7 @@ read_data <- function(indata, rev_suffix=c("us", ""), source=c("data-portal", "d
     ## Are there countries in INDSTAT 2 which are neither in INDSTAT 4 Revision 4 nor in INDSTAT 4 Revision 3
     ## (in the selected time intervals)
     if(length(ctx <- ct32[which(!(ct32 %in% c(ct4x, ct3x)))]) > 0) {
-        cat("\n", getCountryName())
+        cat("\n", getCountryName(ctx))
     } else {
         cat("\nThere are no countries in INDSTAT2 which are not included in INDSTAT 4 (R4 and R3)\n")
     }
@@ -211,13 +213,13 @@ cast_indstat <- function(inst)
 
 read_mva <- function(indata, prod_year=ProductionYear)
 {
-    mva <- read_excel(path=file.path(indata, paste0("MVAGDPYB", prod_year, ".xlsx")))
+    mva <- as.data.frame(read_excel(path=file.path(indata, paste0("MVAGDPYB", prod_year, ".xlsx"))))
     head(mva)
     dim(mva)
 
+    compvar <- if("COMPTYPE" %in% colnames(mva)) "COMPTYPE" else "CompType"
     ## Select only countries, no country groups
-    mva <- mva[which(mva$COMPTYPE=="M"), c("acode", "desc", "year", "gdpcod", "mvacod", "gdpcud", "mvacud", "pop")]
-    mva <- as.data.frame(mva)
+    mva <- mva[which(mva[, compvar] == "M"), c("acode", "desc", "year", "gdpcod", "mvacod", "gdpcud", "mvacud", "pop")]
 
     colnames(mva)[1] <- "country"
     colnames(mva)[2] <- "cname"
