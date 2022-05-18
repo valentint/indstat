@@ -25,12 +25,10 @@ read.indstat <- function(indata, rev=c("3x", "4x", "32", "3xus", "4xus", "32us")
     fname <- file.path(indata, paste0("inst", rev, ".csv"))
     cat("\nReading INDSTAT", digits, "revision", substr(revision, 1, 1), "from file", fname, "\n")
 
-    if(source == "desktop")
-    {
+    if(source == "desktop") {
         inst.classes <- c("character","character","integer","character","character","numeric","character","character","integer","character")
         inst.names   <- c("ctable","country","year","isic","isiccomb","value","utable","source","lastupdated","unit")
-    } else
-    {
+    } else {
         inst.classes <- c("character","character","integer","character","character","numeric","character","character","character")
         inst.names   <- c("ctable","country","year","isic","isiccomb","value","utable","source","unit")
     }
@@ -136,7 +134,7 @@ read.indstat2 <- function(indata, fdb=c("32", "3x", "4x", "32us", "3xus", "4xus"
 #' @author \email{valentin@@todorov.at}
 #'
 read_data <- function(indata, rev_suffix=c("us", "none"), source=c("data-portal", "desktop"),
-        first_year_3x=2010, first_year_4x=2008, first_year_32=2000, first_year=first_year_3x,
+        first_year_3x=2008, first_year_4x=2008, first_year_32=2000, first_year=first_year_3x,
         exclude_IIP=TRUE)
 {
     rev_suffix <- match.arg(rev_suffix)
