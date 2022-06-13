@@ -9,9 +9,5 @@ create_rcodes <- function()
     raggr[which(raggr$ACODE==531), "ISOCN"] <- "CUW"
     raggr[which(raggr$CCODE==531), "ISOCN"] <- "CUW"
 
-    rcodes$DESC <- enc2utf8(rcodes$DESC)
-    raggr$ADESC <- enc2utf8(raggr$ADESC)
-    raggr$CDESC <- enc2utf8(raggr$CDESC)
-
     save(rcodes, raggr, file="country_codes.rda", version=2)
 }

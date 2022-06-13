@@ -94,7 +94,7 @@ grate <- function(X, T, t0, tn)
     t <- T[ipos1:ipos2]
     if(length(which(is.na(x))) == 0)
     {
-        lx <- log(x)
+        lx <- log(ifelse(x>0, x, 1e-6))             # avoid non-positive numbers
         lmx <- lm(lx~t)
         r.regress <- 100*(exp(coef(lmx)[2])-1)
     } else
