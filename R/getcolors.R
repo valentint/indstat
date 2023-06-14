@@ -2,7 +2,7 @@
 ##  VT::26.08.2019
 ##
 ##
-##  roxygen2::roxygenise("C:/projects/statproj/R/yearbook2019")
+##  roxygen2::roxygenise("C:/users/valen/onedrive/myrepo/R/indstat", load_code=roxygen2:::load_installed)
 ##
 ##  CMYK to RGB color conversion:
 ##  https://www.rapidtables.com/convert/color/cmyk-to-rgb.html

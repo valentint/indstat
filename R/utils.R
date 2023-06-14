@@ -1,7 +1,7 @@
 ######
 ##  VT::08.01.2021
 ##
-##  roxygen2::roxygenise("C:/projects/statproj/R/yearbook2021")
+##  roxygen2::roxygenise("C:/users/valen/onedrive/myrepo/R/indstat", load_code=roxygen2:::load_installed)
 ##
 ##  check if a str obj is actually numeric
 ##

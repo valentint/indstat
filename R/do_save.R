@@ -1,7 +1,7 @@
 ######
 ##  VT::17.02.2021
 ##
-##  roxygen2::roxygenise("C:/projects/statproj/R/yearbook2021")
+##  roxygen2::roxygenise("C:/users/valen/onedrive/myrepo/R/indstat", load_code=roxygen2:::load_installed)
 ##
 #' @name do_save
 #' @title Save a graph to a file on disk inone of the following formats: pdf, cairo, wmf, svg

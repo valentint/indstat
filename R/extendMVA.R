@@ -1,7 +1,7 @@
 ######
 ##  VT::17.02.2021
 ##
-##  roxygen2::roxygenise("C:/projects/statproj/R/yearbook2021")
+##  roxygen2::roxygenise("C:/users/valen/onedrive/myrepo/R/indstat", load_code=roxygen2:::load_installed)
 ##
 #' @name extendMVA
 #' @title Compute extended indicators based on the MVA database: GDPpc, MVApc, MVAsh, GDPgr, MVAgr, ImWMVA

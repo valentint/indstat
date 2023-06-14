@@ -1,6 +1,6 @@
 ##-------------------------------------------------------------------------------
 ##
-##  roxygen2::roxygenise("MY PATH", load_code=roxygen2:::load_installed)
+##  roxygen2::roxygenise("C:/users/valen/onedrive/myrepo/R/indstat", load_code=roxygen2:::load_installed)
 ##
 
 ##
